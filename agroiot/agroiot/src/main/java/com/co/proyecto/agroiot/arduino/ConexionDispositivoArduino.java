@@ -1,4 +1,4 @@
-package com.co.proyecto.agroiot.controlador;
+package com.co.proyecto.agroiot.arduino;
 import com.co.proyecto.agroiot.servicios.ServiciosHumedadInterface;
 import com.co.proyecto.agroiot.servicios.ServiciosTemperaturaInterface;
 import com.panamahitek.ArduinoException;
