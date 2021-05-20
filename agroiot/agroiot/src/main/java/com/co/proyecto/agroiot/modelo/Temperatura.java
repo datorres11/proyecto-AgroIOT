@@ -17,7 +17,7 @@ public class Temperatura {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE ,generator="TEMPERATURA_ID_SEQ")
 	@Column(name="id")
-	private int id;
+	private Long id;
 	
 	@Column(name="temperatura")
 	private Long temperatura;
@@ -25,11 +25,11 @@ public class Temperatura {
 	@Column(name="fecha")
 	private Date fecha;
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

@@ -19,7 +19,7 @@ public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE ,generator="USUARIO_ID_SEQ")
 	@Column(name="id")
-	private int id;
+	private Long id;
 
 	@Column(name="nombre")
 	private String nombre;
@@ -38,12 +38,12 @@ public class Usuario {
 	@Column(name="humedad")
 	private List<Temperatura> humedades;
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setId(Long id) {
+		this.id =  id;
 	}
 
 	public String getNombre() {

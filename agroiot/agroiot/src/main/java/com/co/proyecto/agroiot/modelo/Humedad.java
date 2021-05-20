@@ -18,7 +18,7 @@ public class Humedad {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE ,generator="HUMEDAD_ID_SEQ")
 	@Column(name="id")
-	private int id;
+	private Long id;
 	
 	@Column(name="humedad")
 	private Long humedad;
@@ -26,11 +26,11 @@ public class Humedad {
 	@Column(name="fecha")
 	private Date fecha;
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
