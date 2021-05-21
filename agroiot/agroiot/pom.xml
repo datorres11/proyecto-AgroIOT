@@ -16,6 +16,9 @@
 	<description>Aplicativo web AgroIOT</description>
 	<properties>
 		<java.version>1.8</java.version>
+		<jsf-mojarra.version>2.2.11</jsf-mojarra.version>
+		<primefaces.version>6.2</primefaces.version>
+		<primefaces-extensions.version>6.2.8</primefaces-extensions.version>
 	</properties>
 	<repositories>
 		<repository>
@@ -24,6 +27,10 @@
 		</repository>
 	</repositories>
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jdbc</artifactId>
@@ -36,7 +43,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -58,7 +64,23 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>4.4.1-1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.webjars/font-awesome -->
+		<dependency>
+		    <groupId>org.webjars</groupId>
+		    <artifactId>font-awesome</artifactId>
+		    <version>4.7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>webjars-locator</artifactId>
+			<version>0.38</version>
+		</dependency>
+		
 		<dependency>
 	    	<groupId>com.github.PanamaHitek</groupId>
 	    	<artifactId>PanamaHitek_Arduino</artifactId>
@@ -66,7 +88,7 @@
 		</dependency>
 	</dependencies>
 	
-
+	
 	<build>
 		<plugins>
 			<plugin>

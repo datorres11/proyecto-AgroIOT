@@ -7,7 +7,22 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ControladorPrincipal {
 	@GetMapping("/")
-	public String inicio(Model model) {
+	public String inicio() {
 		return "index";
+	}
+	
+	@GetMapping("/humedad")
+	public String humedad() {
+		return "humedad";
+	}
+	
+	@GetMapping("/temperatura")
+	public String temperatura() {
+		return "temperatura";
+	}
+	
+	@GetMapping("/monitorear")
+	public String monitorear() {
+		return "monitorear";
 	}
 }
