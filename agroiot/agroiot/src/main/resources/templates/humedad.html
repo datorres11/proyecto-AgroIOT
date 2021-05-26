@@ -2,10 +2,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+<link rel="stylesheet" th:href="@{/webjars/font-awasome/css/all.css}"/>
+<link th:href="@{/webjars/jquery/jquery.min.js}"/>
+<link th:href="@{/webjars/popper.js/umd/popper.min.js}"/>
+<link th:href="@{/webjars/bootstrap/js/bootstrap.min.js}"/>
 <title>Insert title here</title>
 </head>
 <body>
-	<div>
+	<header th:replace="barramenu :: header"></header>
+	<div th:if="${humedades != null and !humedades.empty}">
 		<table border="1">
 			<thead>
 				<tr>
@@ -16,11 +22,11 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr >
-					<td ></td>
-					<td ></td>
-					<td ></td>
-					<td ></td>
+				<tr th:each="humedad : ${humedades}">
+					<td th:text="${humedad.humedad}" ></td>
+					<td th:text="${humedad.fecha}"></td>
+					<!-- td ></td>
+					<td ></td-->
 					<td>
 						<a ></a>
 						<a ></a>
@@ -29,7 +35,7 @@
 			</tbody>
 		</table>
 	</div>
-	<div>
+	<div th:if="${humedades == null or humedades.empty}">
 		La lista esta vacia
 	</div>
 </body>

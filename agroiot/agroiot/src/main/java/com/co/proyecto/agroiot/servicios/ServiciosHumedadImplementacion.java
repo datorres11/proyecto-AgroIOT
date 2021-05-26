@@ -1,6 +1,7 @@
 package com.co.proyecto.agroiot.servicios;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -20,6 +21,11 @@ public class ServiciosHumedadImplementacion implements ServiciosHumedadInterface
 		humed.setFecha(new Date());
 		return repositorioHumedad.save(humed);
 		
+	}
+
+	@Override
+	public List<Humedad> listaHumedades() {
+		return (List<Humedad>) repositorioHumedad.findAll();
 	}
 
 }

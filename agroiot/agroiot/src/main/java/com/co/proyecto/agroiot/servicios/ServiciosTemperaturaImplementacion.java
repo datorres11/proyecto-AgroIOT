@@ -1,6 +1,7 @@
 package com.co.proyecto.agroiot.servicios;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -21,6 +22,11 @@ public class ServiciosTemperaturaImplementacion implements ServiciosTemperaturaI
 		temp.setFecha(new Date());
 		return repositorioTemperatura.save(temp);
 		
+	}
+
+	@Override
+	public List<Temperatura> listaTemperaturas() {
+		return (List<Temperatura>) (repositorioTemperatura.findAll());
 	}
 
 }
